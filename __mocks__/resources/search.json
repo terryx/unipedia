@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Middlesex University",
+    "state-province": null,
+    "alpha_two_code": "GB",
+    "country": "United Kingdom",
+    "web_pages": ["http://www.mdx.ac.uk/"],
+    "domains": ["mdx.ac.uk"]
+  },
+  {
+    "name": "Middlesex County College",
+    "state-province": null,
+    "alpha_two_code": "US",
+    "country": "United States",
+    "web_pages": ["http://www.middlesexcc.edu"],
+    "domains": ["middlesexcc.edu"]
+  }
+]
