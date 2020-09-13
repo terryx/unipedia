@@ -1,7 +1,7 @@
 import React, { createContext, useReducer, useEffect } from 'react'
 import universityReducer from '../reducers/university.reducer'
 
-const initialValues = []
+const initialValues = {}
 const UniversityStateContext = createContext()
 const UniversityDispatchContext = createContext()
 

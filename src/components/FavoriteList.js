@@ -1,37 +1,29 @@
-import React, { useContext, memo } from 'react'
-import { UniversityStateContext } from "../contexts/university.context"
+import React, { useContext } from 'react'
 import { UniversityDispatchContext } from '../contexts/university.context';
 import useLocalStorage from '../hooks/useLocalStorage'
-import Search from './Search'
 
-function UniversityList() {
-    const { universities } = useContext(UniversityStateContext)
-    const [storage, setItem] = useLocalStorage('favorites', [])
+function FavoriteList() {
+    const [universities, setItem] = useLocalStorage('favorites', [])
     const dispatch = useContext(UniversityDispatchContext)
 
-    if (!universities) {
-        return (
-            <Search />
-        )
+    const removeFavorite = (uni) => {
+        const data = universities.filter(u => u.name != uni.name)
+        setItem(data)
+        dispatch({ type: 'REMOVE_FAVORITE', payload: uni })
     }
 
-    const addToFavorite = (uni) => {
-        const data = storage.filter(u => u.name != uni.name)
-        const newList = [...data, uni]
-        setItem(newList)
-        dispatch({ type: 'SAVE_FAVORITE', payload: uni })
+    if (!universities) {
+        return null
     }
 
     return (
         <>
-            <Search />
             <div className="container">
                 <style jsx>{`
                 .card {
                     margin-bottom: 0.5em;
                 }
             `}</style>
-
                 {universities.map(uni => {
                     return (
                         <div className="card" key={uni.name}>
@@ -41,17 +33,17 @@ function UniversityList() {
                                 <a href={`//${uni.domains[0]}`} target="_blank" className="btn btn-primary">{uni.domains[0]}</a>
 
                                 <div className="float-right">
-                                    <button onClick={() => addToFavorite(uni)} className="btn btn-danger rounded btn-sm">
-                                        Add to Favorite
+                                    <button onClick={() => removeFavorite(uni)} className="btn btn-danger rounded btn-sm">
+                                        Remove
                                     </button>
                                 </div>
                             </div>
                         </div>
                     )
                 })}
-            </div >
+            </div>
         </>
     )
 }
 
-export default memo(UniversityList)
+export default FavoriteList

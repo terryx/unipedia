@@ -1,1 +1,4 @@
-{}
+{
+  "coverageDirectory": "coverage",
+  "collectCoverageFrom": ["src/**/*.js", "pages/**/*.js"]
+}

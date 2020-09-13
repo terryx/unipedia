@@ -1,6 +1,3 @@
-import UniversityAPI from '../services/university-api'
-const api = new UniversityAPI()
-
 const reducer = (state, action) => {
     switch (action.type) {
         case 'SEARCH':
@@ -16,7 +13,12 @@ const reducer = (state, action) => {
 
                 return acc
             }, { list: [], unique: {} })
-            return data.list
+            return { ...state, universities: data.list }
+        case 'SAVE_FAVORITE':
+            const universities = state.universities.filter(uni => uni.name != action.payload.name)
+            return { ...state, universities, favorites: action.payload }
+        case 'REMOVE_FAVORITE':
+            return state
     }
 }
 
