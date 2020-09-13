@@ -1,10 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { UniversityDispatchContext } from '../contexts/university.context';
 import useLocalStorage from '../hooks/useLocalStorage'
 
 function FavoriteList() {
-    const [universities, setItem] = useLocalStorage('favorites', [])
+    const initialList = []
+    const [items, setItem] = useLocalStorage('favorites', initialList)
+    const [universities, setUniversities] = useState(initialList)
     const dispatch = useContext(UniversityDispatchContext)
+
+    /// create a local copy because localStorage is not available before ComponentDidMount
+    useEffect(() => {
+        setUniversities(items)
+    }, [items])
 
     const removeFavorite = (uni) => {
         const data = universities.filter(u => u.name != uni.name)

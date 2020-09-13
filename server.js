@@ -13,7 +13,6 @@ app.prepare().then(() => {
         const { pathname, query, search } = parsedUrl
 
         if (pathname === '/newsletter' && search !== '') {
-            console.log(search)
             const newsletter = new NewsLetter()
             newsletter.save(search)
         }

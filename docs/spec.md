@@ -12,11 +12,13 @@
 
 - [x] Responsive design
 
-- [ ] Login/Register feature
+- [x] Login feature
+
+- [ ] Register feature
 
 - [x] Save favorite university
 
-### Architecture requirements
+### Technology requirements
 
 - [x] React App
 
@@ -28,7 +30,14 @@
 
 - [ ] Good README - https://gist.github.com/PurpleBooth/109311bb0361f32d87a2 (dead link)
 
-### Next improvement
+### Implementation plan
+- React version >= 16.13.1 to make use of context API and hooks
+- NextJS as development server to reduce effort on router
+- Jest test suite for unit test and coverage
+- Bootstrap CSS for applied global style
+- Axios http library to call university API
+
+### Next improvement plan
 
 - [x] Use reactiveX to handle user input events
 
