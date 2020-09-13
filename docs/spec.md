@@ -2,43 +2,43 @@
 
 ### Product requirements
 
-[x] Navbar
+- [x] Navbar
 
-[x] Search feature
+- [x] Search feature
 
-[x] Newsletter to save data to one json file called _users.json_
+- [x] Newsletter to save data to one json file called _users.json_
 
-[x] Make use of react reusable components
+- [x] Make use of react reusable components
 
-[x] Responsive design
+- [x] Responsive design
 
-[] Login/Register feature
+- [ ] Login/Register feature
 
-[x] Save favorite university
+- [x] Save favorite university
 
 ### Architecture requirements
 
-[x] React App
+- [x] React App
 
-[] Needs to have at least navbar with 3 menu and 3 routes
+- [x] Needs to have at least navbar with 3 menu and 3 routes
 
-[x] Unit test with coverage
+- [x] Unit test with coverage
 
-[x] ESlint
+- [x] ESlint
 
-[] Good README - https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+- [ ] Good README - https://gist.github.com/PurpleBooth/109311bb0361f32d87a2 (dead link)
 
 ### Next improvement
 
-[x] Use reactiveX to handle user input events
+- [x] Use reactiveX to handle user input events
 
-[] Add typescript support
+- [ ] Add typescript support
 
-[] UI Component tests
+- [ ] UI Component tests
 
-[] Integration tests
+- [ ] Integration tests
 
-[] Use better design components such as material ui
+- [ ] Use better design components such as material ui
 
 ### References
 
