@@ -7,6 +7,7 @@ Make sure you have at least **NodeJS v12** installed
 1. Go to terminal and run `npm install`
 2. `npm run dev`
 3. Navigate to browser and go to http://localhost:3000
+4. Start searching university name in search bar, minimium 3 characters
 
 ### Documentation
 - [Engineering Spec](./docs/spec.md)
